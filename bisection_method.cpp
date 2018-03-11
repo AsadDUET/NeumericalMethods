@@ -17,7 +17,7 @@ int main()
     if((f(x1)*f(x2))<0)
     {
         //cout<<"Root available in this region.";
-        while(abs(x1-x2)>0.000001)
+        while(abs(x1-x2)>e)
         {
             x0=(x1+x2)/2;
             if((f(x1)*f(x0))<0)
