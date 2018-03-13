@@ -1,5 +1,5 @@
 #include<iostream>
-#include <cmath>
+#include<cmath>
 using namespace std;
 
 float f(float x);
@@ -11,12 +11,17 @@ float e=0.000001;
 
 int main()
 {
+    cout<<"Enter Lower limit:";
+    cin>>x1;
+    cout<<"Enter Upper Limit: ";
+    cin>>x2;
+    cout<<"Enter Stopping criteria: ";
+    cin>>e;
     cout<<f(x1)<<endl;
     cout<<f(x2)<<endl;
 
     if((f(x1)*f(x2))<0)
     {
-        //cout<<"Root available in this region.";
         while(abs(x1-x2)>e)
         {
             x0=(x1+x2)/2;
@@ -42,6 +47,6 @@ int main()
 float f(float x)
 {
 
-    return x*x-2*x-10;
+    return x*x-5;
 }
 
