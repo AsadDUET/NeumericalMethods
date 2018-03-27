@@ -25,14 +25,12 @@ int main()
         cout<<"So, Root is available in the bracket\nLooping..."<<endl;
         while((abs(x1-x2))>=e)
         {
-            x0=(x1+x2)/2;
+            x0=x1+f(x1)*(x2-x1)/(f(x2)-f(x1));
             if(f(x0)==0){
                 x1=x0;
                 x2=x0;
                 break;
-
             }
-
             if((f(x1)*f(x0))<0)
                 x2=x0;
             else
@@ -41,17 +39,13 @@ int main()
             }
         //cout<<x0<<endl;
         }
-
         cout<<"The Root is: "<<(x1+x2)/2<<endl;
-
     }
     else
     {
         cout<<"Root Not available in this Bracket.";
     }
-
 }
-
 float f(float x)
 {
     return x*x-4*x-10;
